@@ -1,0 +1,48 @@
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #f0f0f0;
+  color: #444;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  font-family: inherit; /* Use global font */
+}
+
+.footer h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.social-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+  border-radius: 6px;
+  width: 150px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.social-box:hover {
+  transform: scale(1.05);
+}
+
+.icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.text span {
+  font-weight: bold;
+}
