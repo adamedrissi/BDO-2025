@@ -2,12 +2,12 @@ import React, { useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaWhatsapp, FaXTwitter, FaFacebookF } from 'react-icons/fa6';
 
-function PlayerAwardImage4({ top5 }) {
+function PlayerAwardImage3f({ top5 }) {
   const { t } = useTranslation();
   const canvasRef = useRef(null);
-  const backgroundImage = process.env.PUBLIC_URL + '/results4.png';
-  const shareText = `TROPHÉE JOHAN CRUYFF 2025 - Top 5\n\n` + top5.map((name, index) => `${index + 1}. ${typeof name === 'string' ? name : name.name}`).join('\n') + `\n\nhttps://ballondor2025.netlify.app/Troph%C3%A9e%20Johan%20Cruyff/masculin`;
-  const yourURL = "https://ballondor2025.netlify.app/Troph%C3%A9e%20Johan%20Cruyff/masculin";
+  const backgroundImage = process.env.PUBLIC_URL + '/results3f.png';
+  const shareText = `TROPHÉE YACHINE FÉMENIN 2025 - Top 5\n\n` + top5.map((name, index) => `${index + 1}. ${typeof name === 'string' ? name : name.name}`).join('\n') + `\n\nhttps://ballondor2025.netlify.app/Troph%C3%A9e%20Yachine/femenin`;
+  const yourURL = "https://ballondor2025.netlify.app/Troph%C3%A9e%20Yachine/femenin";
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -21,7 +21,7 @@ function PlayerAwardImage4({ top5 }) {
       ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
       const topCoords = [
-        [90, 133], [105, 291], [120, 409], [125, 497], [125, 571]
+        [90, 134], [105, 291], [120, 410], [150, 458], [150, 493]
       ];
 
       top5.forEach(({ name }, i) => {
@@ -31,7 +31,7 @@ function PlayerAwardImage4({ top5 }) {
         if (i === 0) fontSize = 28;
         else if (i === 1) fontSize = 24;
         else if (i === 2) fontSize = 20;
-        else fontSize = 19;
+        else fontSize = 18;
 
         ctx.font = `bold ${fontSize}px Arial`;
         ctx.fillStyle = '#000';
@@ -42,14 +42,14 @@ function PlayerAwardImage4({ top5 }) {
 
   const downloadImage = () => {
     const link = document.createElement('a');
-    link.download = 'johancruyff2025.png';
+    link.download = 'yachine2025f.png';
     link.href = canvasRef.current.toDataURL('image/png');
     link.click();
   };
 
   return (
     <div style={{ textAlign: 'center', marginTop: '20px' }}>
-      <canvas ref={canvasRef} width={1209} height={607} style={{ border: '1px solid #ccc' }} />
+      <canvas ref={canvasRef} width={1209} height={506} style={{ border: '1px solid #ccc' }} />
       <br />
       <button onClick={downloadImage} style={{ marginTop: '10px', fontFamily: 'Figtree' }}>
         {t('download')}
@@ -75,4 +75,4 @@ function PlayerAwardImage4({ top5 }) {
   );
 }
 
-export default PlayerAwardImage4;
+export default PlayerAwardImage3f;

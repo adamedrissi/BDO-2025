@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { /*useEffect, */useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import PlayerAwardImage2 from '../../components/PlayerAwardImage2';
+import PlayerAwardImage2f from '../../components/PlayerAwardImage2f';
 
 function ItemOrderingPage2f() {
   const { state } = useLocation();
@@ -10,7 +10,7 @@ function ItemOrderingPage2f() {
   const [items, setItems] = useState(state?.selectedItems || []);
 
   const [showResult, setShowResult] = useState(false);
-  const [finalTop10, setFinalTop10] = useState([]);
+  const [finalTop5, setFinalTop5] = useState([]);
 
   const moveUp = (index) => {
     if (index === 0) return;
@@ -27,25 +27,25 @@ function ItemOrderingPage2f() {
   };
 
   /*useEffect(() => {
-    const savedTop10 = localStorage.getItem('kopaFTop10');
-    if (savedTop10) {
-      setItems(JSON.parse(savedTop10));
+    const savedTop5 = localStorage.getItem('kopaFTop5');
+    if (savedTop5) {
+      setItems(JSON.parse(savedTop5));
     }
   }, []);
   
   useEffect(() => {
-    localStorage.setItem('kopaFTop10', JSON.stringify(items));
+    localStorage.setItem('kopaFTop5', JSON.stringify(items));
   }, [items]);*/
 
   const handleSubmit = () => {
     const formattedList = items
     .map((item, index) => `${index + 1}. ${item}`)
     .join('\n');
-    alert(`TROPHÉE KOPA 2025:\n${formattedList}`);
+    alert(`TROPHÉE KOPA FÉMENIN 2025:\n${formattedList}`);
 
-    const top10Names = items.map(item => ({ name: item }));;
+    const top5Names = items.map(item => ({ name: item }));;
 
-    setFinalTop10(top10Names);
+    setFinalTop5(top5Names);
     setShowResult(true);
   };
 
@@ -69,7 +69,7 @@ function ItemOrderingPage2f() {
       <button onClick={handleSubmit} style={{ marginTop: '20px', fontFamily: 'Figtree' }}>{t('submitOrder')}</button>
 
       {showResult && (
-        <PlayerAwardImage2 top10={finalTop10}/>
+        <PlayerAwardImage2f top5={finalTop5}/>
       )}
 
       {showResult && (

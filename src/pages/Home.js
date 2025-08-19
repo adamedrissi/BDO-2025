@@ -22,7 +22,7 @@ function Home() {
     <div style={{ textAlign: 'center', padding: '40px' }}>
       <h1>{t('BDO')} 2025</h1>
       <p>{t('Dates')}</p>
-      <p>{t('Dates2')}13 {t('July')} 2025</p>
+      <p>{t('Dates2')}31 {t('July')} 2025</p>
 
       <h2>{t('Men')}</h2>
 

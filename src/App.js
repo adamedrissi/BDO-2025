@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-//import i18n from './i18n'; 
 import { MdHome, MdLanguage } from 'react-icons/md';
 import './styles/App.css';
 import BallonDorMasculin from './pages/masculin/BallonDorMasculin';
@@ -218,7 +217,6 @@ export default App;
 //customise background
 //gerd muller goal ratio
 //add assists statistics to super ballon dor s
-//add translations for super ballon dor s,etc
 //improve stylising and button positions
 //colour the list buttons (up-green, down-red)
 //cluboftheyear.png

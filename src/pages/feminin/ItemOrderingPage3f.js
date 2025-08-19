@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { /*useEffect, */useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import PlayerAwardImage3 from '../../components/PlayerAwardImage3';
+import PlayerAwardImage3f from '../../components/PlayerAwardImage3f';
 
 function ItemOrderingPage3f() {
   const { state } = useLocation();
@@ -10,7 +10,7 @@ function ItemOrderingPage3f() {
   const [items, setItems] = useState(state?.selectedItems || []);
 
   const [showResult, setShowResult] = useState(false);
-  const [finalTop10, setFinalTop10] = useState([]);
+  const [finalTop5, setFinalTop5] = useState([]);
 
   const moveUp = (index) => {
     if (index === 0) return;
@@ -27,25 +27,25 @@ function ItemOrderingPage3f() {
   };
 
   /*useEffect(() => {
-    const savedTop10 = localStorage.getItem('yashinFTop10');
-    if (savedTop10) {
-      setItems(JSON.parse(savedTop10));
+    const savedTop5 = localStorage.getItem('yashinFTop5');
+    if (savedTop5) {
+      setItems(JSON.parse(savedTop5));
     }
   }, []);
   
   useEffect(() => {
-    localStorage.setItem('yashinFTop10', JSON.stringify(items));
+    localStorage.setItem('yashinFTop5', JSON.stringify(items));
   }, [items]);*/
 
   const handleSubmit = () => {
     const formattedList = items
     .map((item, index) => `${index + 1}. ${item}`)
     .join('\n');
-    alert(`TROPHÉE YACHINE 2025:\n${formattedList}`);
+    alert(`TROPHÉE YACHINE FÉMENIN 2025:\n${formattedList}`);
     
-    const top10Names = items.map(item => ({ name: item }));;
+    const top5Names = items.map(item => ({ name: item }));;
 
-    setFinalTop10(top10Names);
+    setFinalTop5(top5Names);
     setShowResult(true);
   };
 
@@ -69,7 +69,7 @@ function ItemOrderingPage3f() {
       <button onClick={handleSubmit} style={{ marginTop: '20px', fontFamily: 'Figtree' }}>{t('submitOrder')}</button>
       
       {showResult && (
-        <PlayerAwardImage3 top10={finalTop10}/>
+        <PlayerAwardImage3f top5={finalTop5}/>
       )}
 
       {showResult && (

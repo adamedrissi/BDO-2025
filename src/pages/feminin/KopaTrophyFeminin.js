@@ -49,8 +49,8 @@ const categories2 = {
   FW: [
       "Alice SOTO",
       "Alyssa THOMPSON",
-      "Chiamaka OKWUCHUKWU",
       "Choe IL-SON",
+      "Claudia MARTÍNEZ",
       "Fridah MUKOMA",
       "Iman BENEY",
       "Jaedyn SHAW",
@@ -73,7 +73,7 @@ function KopaTrophyFemenin() {
   const toggleSelect = (item) => {
     if (selectedItems.includes(item)) {
       setSelectedItems(selectedItems.filter((i) => i !== item));
-    } else if (selectedItems.length < 10) {
+    } else if (selectedItems.length < 5) {
       setSelectedItems([...selectedItems, item]);
     }
   };
@@ -90,10 +90,10 @@ function KopaTrophyFemenin() {
   }, [selectedItems]);
 
   const handleSubmit = () => {
-    if (selectedItems.length === 10) {
+    if (selectedItems.length === 5) {
       navigate('/order2f', { state: { selectedItems } });
     } else {
-      alert('Please select exactly 10 items.');
+      alert('Please select exactly 5 items.');
     }
   };
 
@@ -113,7 +113,7 @@ function KopaTrophyFemenin() {
 
       <p>{t('KopaInfo2')}</p>
       <p>{t('DatesF')}</p>
-      <p>{t('Dates2')}27 {t('July')} 2025</p>
+      <p>{t('Dates2')}30 {t('July')} 2025</p>
 
       <h2>{t('selectPlayers4')}</h2>
 
@@ -142,7 +142,7 @@ function KopaTrophyFemenin() {
             </div>
           </div>
         ))}
-        <p>{t('selected2')}{selectedItems.length} / 10</p>
+        <p>{t('selected2')}{selectedItems.length} / 5</p>
       </div>
 
       <button
@@ -159,7 +159,7 @@ function KopaTrophyFemenin() {
 
       <br />
 
-      {selectedItems.length === 10 && (
+      {selectedItems.length === 5 && (
         <button onClick={handleSubmit} style={{ marginTop: '20px', fontFamily: 'Figtree' }}>
           {t('submit2')}
         </button>

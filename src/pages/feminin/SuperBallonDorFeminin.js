@@ -113,7 +113,7 @@ const goals = [
     </h>,
     goals: <h
     style={{ color: '#FFD700', fontWeight: 'bold' }}>
-      308
+      309
     </h>,
     assists: <h
     style={{ color: '#FFD700', fontWeight: 'bold' }}>
@@ -121,7 +121,7 @@ const goals = [
     </h>,
     appearances: <h
     style={{ color: '#FFD700', fontWeight: 'bold' }}>
-      538 *
+      539 *
     </h>,
     image5: <img
       src={thebest}
@@ -183,9 +183,9 @@ const goals = [
       name: "teams.BRAZIL",
       stats: [
         { competition: "2002 SUB-19", goals: "N/A", assists: "N/A", appearances: "N/A" },
-        { competition: "2002-2025 ABSOLUTA", goals: 119, assists: "N/A", appearances: 204 }
+        { competition: "2002-2025 ABSOLUTA", goals: 120, assists: "N/A", appearances: 205 }
       ],
-      total: { goals: 119, assists: "N/A", appearances: 204 }
+      total: { goals: 120, assists: "N/A", appearances: 205 }
       }
     }
   },
@@ -618,7 +618,7 @@ function SuperBallonDorFeminin() {
       <h1>{t('superBallonDorF')} 2029</h1>
       <p>{t('sBallonDor2')}</p>
       <p>{t('DatesSBD2')}</p>
-      <p>{t('Dates2')}27 {t('July')} 2025</p>
+      <p>{t('Dates2')}30 {t('July')} 2025</p>
       <br />
       <h3>{t('sBDOR')}</h3>
       <div style={{ marginTop: '30px' }}>

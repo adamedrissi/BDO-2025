@@ -67,7 +67,7 @@ function JohanCruyffTrophy() {
   const toggleSelect = (item) => {
     if (selectedItems.includes(item)) {
       setSelectedItems(selectedItems.filter((i) => i !== item));
-    } else if (selectedItems.length < 6) {
+    } else if (selectedItems.length < 5) {
       setSelectedItems([...selectedItems, item]);
     }
   };
@@ -84,10 +84,10 @@ function JohanCruyffTrophy() {
   }, [selectedItems]);
 
   const handleSubmit = () => {
-    if (selectedItems.length === 6) {
+    if (selectedItems.length === 5) {
       navigate('/order4', { state: { selectedItems } });
     } else {
-      alert('Please select exactly 6 items.');
+      alert('Please select exactly 5 items.');
     }
   };
 
@@ -130,7 +130,7 @@ function JohanCruyffTrophy() {
             </div>
           </div>
         ))}
-        <p>{t('selected')}{selectedItems.length} / 6</p>
+        <p>{t('selected')}{selectedItems.length} / 5</p>
       </div>
 
       <button
@@ -147,7 +147,7 @@ function JohanCruyffTrophy() {
 
       <br />
 
-      {selectedItems.length === 6 && (
+      {selectedItems.length === 5 && (
         <button onClick={handleSubmit} style={{ marginTop: '20px', fontFamily: 'Figtree' }}>
           {t('submit')}
         </button>

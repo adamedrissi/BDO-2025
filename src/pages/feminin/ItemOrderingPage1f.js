@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { /*useEffect, */useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
@@ -146,7 +146,7 @@ function ItemOrderingPage1f() {
 
     const clubOfTheYearText = clubOfTheYear? `CLUB OF THE YEAR: ${clubOfTheYear} (${clubCount[clubOfTheYear]} noms, ${clubPoints[clubOfTheYear]} pts)`: '';
 
-    alert(`BALLON D'OR 2025 - Top 10:\n${formattedPoints}\n\n${clubOfTheYearText}\n\n11–30:\n${formattedPositions}`);    
+    alert(`BALLON D'OR FÉMENIN 2025 - Top 10:\n${formattedPoints}\n\n${clubOfTheYearText}\n\n11–30:\n${formattedPositions}`);    
 
     setFinalTop10(top10Names);
     setFinalBottom20(bottom20Names);

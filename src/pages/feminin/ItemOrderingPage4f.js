@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { /*useEffect, */useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
@@ -10,7 +10,7 @@ function ItemOrderingPage4f() {
   const [items, setItems] = useState(state?.selectedItems || []);
 
   const [showResult, setShowResult] = useState(false);
-  const [finalTop6, setFinalTop6] = useState([]);
+  const [finalTop5, setFinalTop5] = useState([]);
 
   const moveUp = (index) => {
     if (index === 0) return;
@@ -27,25 +27,25 @@ function ItemOrderingPage4f() {
   };
 
   /*useEffect(() => {
-    const savedTop6 = localStorage.getItem('jcTrophyFTop6');
-    if (savedTop6) {
-      setItems(JSON.parse(savedTop6));
+    const savedTop5 = localStorage.getItem('jcTrophyFTop5');
+    if (savedTop5) {
+      setItems(JSON.parse(savedTop5));
     }
   }, []);
   
   useEffect(() => {
-    localStorage.setItem('jcTrophyFTop6', JSON.stringify(items));
+    localStorage.setItem('jcTrophyFTop5', JSON.stringify(items));
   }, [items]);*/
 
   const handleSubmit = () => {
     const formattedList = items
     .map((item, index) => `${index + 1}. ${item}`)
     .join('\n');
-    alert(`TROPHÉE JOHAN CRUYFF 2025:\n${formattedList}`);
+    alert(`TROPHÉE JOHAN CRUYFF FÉMENIN 2025:\n${formattedList}`);
       
-    const top6Names = items.map(item => ({ name: item }));;
+    const top5Names = items.map(item => ({ name: item }));;
 
-    setFinalTop6(top6Names);
+    setFinalTop5(top5Names);
     setShowResult(true);
   };
 
@@ -69,7 +69,7 @@ function ItemOrderingPage4f() {
       <button onClick={handleSubmit} style={{ marginTop: '20px', fontFamily: 'Figtree' }}>{t('submitOrder')}</button>
             
       {showResult && (
-        <PlayerAwardImage4 top6={finalTop6}/>
+        <PlayerAwardImage4 top5={finalTop5}/>
       )}
 
       {showResult && (

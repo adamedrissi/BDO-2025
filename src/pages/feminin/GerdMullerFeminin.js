@@ -1063,7 +1063,7 @@ function GerdMullerFemenin() {
       <h1>{t('MullerF')} 2025</h1>
       <p>{t('muller2')}</p>
       <p>{t('DatesF')}</p>
-      <p>{t('Dates2')}27 {t('July')} 2025</p>
+      <p>{t('Dates2')}30 {t('July')} 2025</p>
       <br />
       <h3>{t('mullerR')}</h3>
       <div style={{ marginTop: '30px' }}>

@@ -26,6 +26,7 @@ const categories = {
     "JOHN Victor",
     "Jordan PICKFORD",
     "KEPA Arrizabalaga",
+    "Lucas CHEVALIER",
     "Lukáš HORNÍČEK",
     "Manuel NEUER",
     "Marco CARNESECCHI",
@@ -35,7 +36,6 @@ const categories = {
     "Mile SVILAR",
     "Nick POPE",
     "Noah ATUBOLU",
-    "Predrag RAJKOVIĆ",
     "Robert SÁNCHEZ",
     "Rui SILVA",
     "Sergio HERRERA",
@@ -92,7 +92,6 @@ const categories = {
     "Virgil VAN DIJK",
     "William SALIBA",
     "Willian PACHO"
-
     ],
   MID: [
     "Adrien RABIOT",

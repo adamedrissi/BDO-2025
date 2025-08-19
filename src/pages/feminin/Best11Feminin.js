@@ -31,6 +31,7 @@ const players2 = {
   DEF: [
       "A.FERNÁNDEZ",
       "BJÖRN",
+      "CATLEY",
       "E.BRUGTS",
       "E.CARPENTER",
       "E.FOX",
@@ -44,7 +45,6 @@ const players2 = {
       "LAKRAR",
       "M.BRIGHT",
       "MAPI LEÓN",
-      "NIGHSWONGER",
       "O.BATLLE",
       "S.BACHA",
       "S.BALTIMORE",
@@ -55,9 +55,6 @@ const players2 = {
   MID: [
       "AITANA.B",
       "ALEXIA.P",
-      "BETHUNE",
-      "BØE RISA",
-      "BUSSY",
       "BRAND",
       "C.PINA",
       "C.WEIR",
@@ -67,18 +64,21 @@ const players2 = {
       "EGURROLA",
       "G.CLINTON",
       "GEYORO",
+      "HARDER",
       "HERSHFELT",
+      "KANERYD",
+      "KIKA.N",
       "K.GORRY",
       "K.LITTLE",
       "K.MCCABE",
       "K.WALSH",
-      "KIKA.N",
       "L.HEAPS",
       "L.JAMES",
       "LABONTA",
       "LAVOGEZ",
       "MAANUM",
       "MARIONA.C",
+      "MARTA",
       "PATRI.G",
       "VICKY.L",
       ],
@@ -91,16 +91,17 @@ const players2 = {
       "BEERENSTEYN",
       "BLACKSTENIUS",
       "BRUUN",
-      "C.KELLY",
-      "C.MATEO",
+      "BÜHL",
+      "CANTORE",
       "CASCARINO",
       "CHAWINGA",
+      "C.KELLY",
+      "C.MATEO",
       "DIANI",
+      "ESTHER.G",
       "FREIGANG",
       "GIRELLI",
-      "G.MONDAY",
       "GRAHAM HANSEN",
-      "HARDER",
       "IMADE",
       "JÓNSDÓTTIR",
       "K.SHAW",
@@ -110,7 +111,6 @@ const players2 = {
       "O.SMITH",
       "PAJOR",
       "REITEN",
-      "S.PARALLUELO",
       "S.WILSON",
       "T.RODMAN"
       ],
@@ -530,7 +530,7 @@ function Best11Femenin() {
       <h1>{t('Best11F')} 2024/25</h1>
 
       <p>{t('DatesF')}</p>
-      <p>{t('Dates2')}27 {t('July')} 2025</p>
+      <p>{t('Dates2')}30 {t('July')} 2025</p>
 
       <h2>{t('selectFormation')}</h2>
       <select value={formation} onChange={(e) => {

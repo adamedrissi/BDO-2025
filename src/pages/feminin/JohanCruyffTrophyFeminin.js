@@ -44,7 +44,7 @@ function JohanCruyffTrophyFemenin() {
   const toggleSelect = (item) => {
     if (selectedItems.includes(item)) {
       setSelectedItems(selectedItems.filter((i) => i !== item));
-    } else if (selectedItems.length < 6) {
+    } else if (selectedItems.length < 5) {
       setSelectedItems([...selectedItems, item]);
     }
   };
@@ -61,10 +61,10 @@ function JohanCruyffTrophyFemenin() {
   }, [selectedItems]);
 
   const handleSubmit = () => {
-    if (selectedItems.length === 6) {
+    if (selectedItems.length === 5) {
       navigate('/order4f', { state: { selectedItems } });
     } else {
-      alert('Please select exactly 6 items.');
+      alert('Please select exactly 5 items.');
     }
   };
 
@@ -83,7 +83,7 @@ function JohanCruyffTrophyFemenin() {
       <h1>{t('JCTrophyF')} 2025</h1>
 
       <p>{t('DatesF')}</p>
-      <p>{t('Dates2')}27 {t('July')} 2025</p>
+      <p>{t('Dates2')}30 {t('July')} 2025</p>
 
       <h2>{t('selectManagers')}</h2>
 
@@ -112,7 +112,7 @@ function JohanCruyffTrophyFemenin() {
             </div>
           </div>
         ))}
-        <p>{t('selected')}{selectedItems.length} / 6</p>
+        <p>{t('selected')}{selectedItems.length} / 5</p>
       </div>
 
       <button
@@ -129,7 +129,7 @@ function JohanCruyffTrophyFemenin() {
 
       <br />
 
-      {selectedItems.length === 6 && (
+      {selectedItems.length === 5 && (
         <button onClick={handleSubmit} style={{ marginTop: '20px', fontFamily: 'Figtree' }}>
           {t('submit')}
         </button>

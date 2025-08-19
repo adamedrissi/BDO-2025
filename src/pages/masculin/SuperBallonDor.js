@@ -82,7 +82,7 @@ const goals = [
     </h>,
     appearances: <h
     style={{ color: '#FFD700', fontWeight: 'bold' }}>
-      1169 *
+      1170 *
     </h>,
     image5: <img
       src={ballondor}
@@ -140,9 +140,9 @@ const goals = [
         { competition: "2004-2005 FC BARCELONA B", goals: 6, assists: "N/A", appearances: 22 },
         { competition: "2004-2021 FC BARCELONA", goals: 672, assists: "N/A", appearances: 778 },
         { competition: "2021-2023 PSG", goals: 32, assists: "N/A", appearances: 75 },
-        { competition: "2023- INTER MIAMI", goals: 58, assists: "N/A", appearances: 68 }
+        { competition: "2023- INTER MIAMI", goals: 58, assists: "N/A", appearances: 69 }
       ],
-      total: { goals: 773, assists: "N/A", appearances: 953 }
+      total: { goals: 773, assists: "N/A", appearances: 954 }
     },
     country: {
       name: "teams.ARGENTINA",
@@ -460,7 +460,7 @@ const goals = [
     club: {
       name: "INTER MILAN",
       stats: [
-        { competition: "1993-1994 CRUZEIRO", goals: 44, appearances: 47 },
+        { competition: "1993-1994 CRUZEIRO", goals: 44, assists: "N/A", appearances: 47 },
         { competition: "1994-1996 PSV", goals: 54, assists: "N/A", appearances: 57 },
         { competition: "1996-1997 FC BARCELONA", goals: 47, assists: "N/A", appearances: 49 },
         { competition: "1997-2002 INTER MILAN", goals: 59, assists: "N/A", appearances: 99 },
@@ -533,7 +533,7 @@ function SuperBallonDor() {
       <h1>{t('superBallonDor')} 2029</h1>
       <p>{t('sBallonDor')}</p>
       <p>{t('DatesSBD')}</p>
-      <p>{t('Dates2')}20 {t('July')} 2025</p>
+      <p>{t('Dates2')}31 {t('July')} 2025</p>
       <br />
       <h3>{t('sBDOR')}</h3>
       <div style={{ marginTop: '30px' }}>

@@ -23,7 +23,7 @@ const confederations = {
       "Joan GARCÍA",
       "Jordan PICKFORD",
       "KEPA Arrizabalaga",
-      "Lucas PERRI",
+      "Lucas CHEVALIER",
       "Lukáš HORNÍČEK",
       "Manuel NEUER",
       "Marco CARNESECCHI",
